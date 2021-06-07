@@ -31,6 +31,20 @@ export class RLStore extends Vue {
             console.log(error);
         }
     }
+    
+    public async getRoverLocationHistory(roverId: number): Promise<RoverLocation[] | null | undefined> {
+        try {
+            const response: AxiosResponse<RoverLocation[]> = await axios.get<RoverLocation[]>(`https://localhost:44372/roverLocation/getLocationHistory/${roverId}`, {
+                headers: {
+                    'Accept': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                }
+            });
+            return response.data;
+        } catch(error) {
+            console.log(error);
+        }
+    }
 }
 
 export const RoverLocationStore: RLStore = new RLStore();

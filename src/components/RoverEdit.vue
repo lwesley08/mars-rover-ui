@@ -52,6 +52,7 @@
                 Z: {{ currentLocation.z }} &nbsp;
             </b-col>
         </b-row>
+        <b-button :to="{ name: 'RoverLocationHistory', params: { roverId } }" variant="primary">See Rover's Full History</b-button>
     </b-card>
 </template>
 <script lang="ts">
