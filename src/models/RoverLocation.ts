@@ -1,4 +1,5 @@
 export default class RoverLocation {
+    public roverId: number | null = null;
     public x: number | null = null;
     public y: number | null = null;
     public z: 'N' | 'E' | 'S' | 'W' | null  = null;

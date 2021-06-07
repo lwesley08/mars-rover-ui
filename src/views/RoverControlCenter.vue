@@ -1,11 +1,17 @@
 <template>
     <b-container>
-        <div class="mb-5">
+        <b-row class="mb-5">
             <grid-edit></grid-edit>
-        </div>
-        <div>
-            <rover-edit></rover-edit>
-        </div>
+        </b-row>
+        <hr>
+        <b-row>
+            <b-col md="6">
+                <rover-edit :roverId="1"></rover-edit>
+            </b-col>
+            <b-col md="6">
+                <rover-edit :roverId="2"></rover-edit>
+            </b-col>
+        </b-row>
     </b-container>
 </template>
 <script lang="ts">
